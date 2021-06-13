@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Popup</title>
+<style>
+	
+
+
+
+.kkduniya_modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: #050303cf; 
+}
+
+
+.kmodal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  top: 30%;
+  box-shadow: 0px 0px 11px 2px #0000001c;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+
+
+/* The Close Button */
+.kmodal_close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.kmodal_close:hover,
+.kmodal_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.kmodal-header {
+  padding: 5px 10px;
+  background: #f3f3f3;
+}
+
+.kmodal-body {
+	padding: 2px 16px;
+	background: #fff;
+}
+
+.kmodal-footer {
+  padding: 25px 16px;
+  background: #f3f3f3;
+}
+#footer_kmodal_close{
+	float: right;
+}
+</style>
+</head>
+<body>
+
+<!-- The Modal -->
+<div class="container">
+	<div id="kmodal" class="kkduniya_modal">
+	  <div class="kmodal-content">
+	    <div class="kmodal-header">
+	      <span class="kmodal_close" id="kmodal_close">&times;</span>
+	      	<h3>Modal Header Area</h3>
+	    </div>
+	    <div class="kmodal-body">
+	      <p> Modal Body Content Area</p>
+	    </div>
+	    <div class="kmodal-footer">
+	      <span>Modal Footer Area</span>
+	      <button class="close_btn" id="footer_kmodal_close">Close</button>
+	    </div>
+	  </div>
+
+	</div>
+</div>
+
+
+<button class="popupbtn" id="popupbtn">Modal</button>
+</body>
+
+<script type="text/javascript">
+
+var btnElement = document.getElementById("popupbtn");
+var modalElement = document.getElementById("kmodal");
+
+btnElement.onclick = function() {
+  modalElement.style.display = "block";
+}
+
+var closeElement = document.getElementById("kmodal_close");
+var footercloseElement = document.getElementById("footer_kmodal_close");
+closeElement.onclick = function() {
+  modalElement.style.display = "none";
+}
+
+footercloseElement.onclick = function() {
+  modalElement.style.display = "none";
+}
+
+</script>
+</html>
